@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: rgb(108, 83, 83);
+}
+
+.registerPages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.344),
+      rgba(0, 0, 0, 0.294)
+    ),
+    url("./assets//images/registerBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .registerContainer {
+    box-shadow: 0px 0px 8px 3px rgba(238, 20, 20, 0.346);
+    border-radius: 30px;
+    background-color: rgba(34, 36, 36, 0.248);
+    padding: 40px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    .titleLogin {
+      text-align: center;
+      font-size: 1.3rem;
+      color: white;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    .inputBox {
+      .registerItem {
+        color: white;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+      }
+      input {
+        width: 230px;
+        background-color: transparent;
+        border-radius: 5px;
+        height: 30px;
+        padding: 5px;
+        // border: 1px solid rgba(137, 125, 125, 0.376);
+        &input:focus {
+          outline: none;
+          border: 1px solid transparent;
+        }
+      }
+      .loginBtn {
+        padding: 5px 10px;
+        background-color: rgba(0, 0, 0, 0.585);
+        border-radius: 5px;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .textLogin {
+      font-size: 9px;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.601);
+      margin-top: 5px;
+      margin-bottom: -15px;
+    }
+    .loginOption {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      margin-top: 10px;
+      img {
+        width: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// --------------------------- Header Component ---------------------------------
+.header {
+  display: flex;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.223);
+  justify-content: space-between;
+  padding: 9px 30px;
+  .left {
+    // background: red;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    column-gap: 6px;
+    .hamburger {
+      cursor: pointer;
+      padding: 7px 6px;
+      border-radius: 50%;
+      margin-right: 15px;
+      &:hover {
+        background-color: rgba(95, 99, 104, 0.207);
+      }
+    }
+    .line {
+      width: 20px;
+      display: block;
+      height: 2.3px;
+      margin: 3px 0;
+      background-color: rgba(0, 0, 0, 0.486);
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      img {
+        width: 40px;
+      }
+    }
+  }
+  .center {
+    background-color: rgba(207, 207, 207, 0.165);
+    flex: 2;
+    display: flex;
+    border-radius: 25px;
+    align-items: center;
+    padding: 4px 20px;
+    box-sizing: border-box;
+    img {
+      width: 18px;
+      height: 18px;
+      margin-right: 4px;
+    }
+    input {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+  }
+  .right {
+    // background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex: 1;
+    img {
+      width: 43px;
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      background-color: rgba(140, 140, 214, 0.253);
+    }
+  }
+}
+
+// --------------------------- sidebar ---------------------------------
+.mainPage {
+  display: flex;
+  .sidebar {
+    padding-top: 30px;
+    display: flex;
+    min-width: 230px;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    text-align: left;
+    min-height: 100vh;
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 19px;
+      width: 100%;
+      padding: 0;
+      li {
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        a {
+          color: rgba(0, 0, 0, 0.744);
+          width: 100%;
+          padding: 15px 8px;
+          display: block;
+          border-radius: 0px 25px 25px 0px;
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          font-size: 0.8rem;
+          border-left: 4px solid transparent;
+          &:hover {
+            background-color: #feefc3;
+            border-left: 4px solid greenyellow;
+          }
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+  .sidebar.active {
+    min-width: 70px;
+    border-right: 3px solid rgba(174, 148, 148, 0.172);
+    ul {
+      li {
+        a {
+          border-radius: 0px;
+          justify-content: center;
+          div {
+            display: none;
+          }
+          img {
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+  .pages {
+    padding: 40px;
+    flex-grow: 1;
+    min-width: 270px;
+  }
+}
+
+// --------------------------- sidebar ---------------------------------
+
+.read {
+  justify-content: center;
+  align-items: center;
+  .addBtn {
+    text-align: right;
+    margin-bottom: 15px;
+    margin-right: 5px;
+  }
+  .action,
+  .upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      padding: 6px;
+      margin-right: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      &:hover {
+        background-color: #feefc3;
+      }
+    }
+  }
+}
